@@ -1,0 +1,75 @@
+formatter: "markdown table" # this is required
+
+version: ">= 0.16"
+
+header-from: .docs/header.md
+footer-from: .docs/footer.md
+
+recursive:
+  enabled: false
+  path: ""
+
+sections:
+  show:
+    - header
+    - requirements
+    - providers
+    - modules
+    - resources
+    - inputs    
+    - outputs
+    - footer
+
+content: |-
+  {{ .Header }}
+  
+  {{ .Providers }}
+
+  {{ .Requirements }}
+
+  {{ .Resources }}
+  
+  ## Usage
+  
+  Basic usage of this module is as follows:  
+
+  ```hcl
+  {{ include "examples/vnet/network/terraform/main.tf" }}
+  ```
+
+  {{ .Inputs }}
+
+  {{ .Outputs }}
+
+  {{ .Footer }}
+
+output:
+  file: README.md
+  mode: replace
+  template: |-
+      <!-- BEGIN_AUTOMATED_TF_DOCS_BLOCK -->
+      {{ .Content }}
+      <!-- END_AUTOMATED_TF_DOCS_BLOCK -->
+
+output-values:
+  enabled: false
+  from: ""
+
+sort:
+  enabled: true
+  by: required
+
+settings:
+  anchor: true
+  color: true
+  default: true
+  description: true
+  escape: true
+  hide-empty: true
+  html: true
+  indent: 2
+  lockfile: true
+  read-comments: true
+  required: true
+  sensitive: true
+  type: true
