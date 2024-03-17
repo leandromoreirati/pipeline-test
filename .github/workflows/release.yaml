@@ -1,0 +1,10 @@
+name: "Release"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  compliance:
+    uses: leandromoreirati/github-workflow/.github/workflows/release.yml@main
