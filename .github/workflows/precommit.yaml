@@ -12,5 +12,6 @@ jobs:
     with:
       tag: 'latest'
       image: 'ghcr.io/antonbabenko/pre-commit-terraform'
+      runs-on: 'ubuntu-latest'
     #secrets:
     #  envPAT: ${{ secrets.envPAT }}
