@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.6](https://github.com/leandromoreirati/pipeline-test/tree/1.1.6) (2024-03-17)
+
+[Full Changelog](https://github.com/leandromoreirati/pipeline-test/compare/1.1.2...1.1.6)
+
 ## [1.1.2](https://github.com/leandromoreirati/pipeline-test/tree/1.1.2) (2024-03-17)
 
 [Full Changelog](https://github.com/leandromoreirati/pipeline-test/compare/1.1.1...1.1.2)
