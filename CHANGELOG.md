@@ -1,5 +1,9 @@
 # Changelog
 
+## [7.3.12](https://github.com/leandromoreirati/pipeline-test/tree/7.3.12) (2024-03-17)
+
+[Full Changelog](https://github.com/leandromoreirati/pipeline-test/compare/7.3.10...7.3.12)
+
 ## [7.3.10](https://github.com/leandromoreirati/pipeline-test/tree/7.3.10) (2024-03-17)
 
 [Full Changelog](https://github.com/leandromoreirati/pipeline-test/compare/7.3.5...7.3.10)
