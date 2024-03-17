@@ -1,0 +1,16 @@
+name: "Release"
+
+on:
+  push:
+    branches:
+      - main
+  #workflow_dispatch:
+
+jobs:
+  release:
+    uses: leandromoreirati/github-workflow/.github/workflows/precommit.yaml@main
+    with:
+      tag: 'latest'
+      image: 'ghcr.io/antonbabenko/pre-commit-terraform'
+    #secrets:
+    #  envPAT: ${{ secrets.envPAT }}
