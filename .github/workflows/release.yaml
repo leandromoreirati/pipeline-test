@@ -7,5 +7,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  compliance:
+  release:
     uses: leandromoreirati/github-workflow/.github/workflows/release.yaml@main
+    with:
+      versionSpec: '5.12.x'
+      configFilePath: './GitVersion.yml'
+      dotNetVersion: '3.1.x'
+      runs-on: 'ubuntu-latest'
+      environment: ''
+    #secrets:
+    #  envPAT: ${{ secrets.envPAT }}
