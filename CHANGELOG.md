@@ -1,3 +1,12 @@
+## [0.1.2](https://github.com/leandromoreirati/pipeline-test/compare/v0.1.1...v0.1.2) (2024-03-29)
+
+
+### Bug Fixes
+
+* Trigger notification ([7b1fe77](https://github.com/leandromoreirati/pipeline-test/commit/7b1fe77cb855903d56d35fa53c3403835c88b99d))
+
+
+
 ## [0.1.1](https://github.com/leandromoreirati/pipeline-test/compare/v0.1.0...v0.1.1) (2024-03-29)
 
 
