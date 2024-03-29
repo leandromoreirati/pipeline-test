@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/leandromoreirati/pipeline-test/compare/v0.2.0...v0.3.0) (2024-03-29)
+
+
+### Features
+
+* Trigger notification ([f8be671](https://github.com/leandromoreirati/pipeline-test/commit/f8be67176c36f6ec1eb8f8499ebde053b5512a38))
+
+
+
 # [0.2.0](https://github.com/leandromoreirati/pipeline-test/compare/v0.1.2...v0.2.0) (2024-03-29)
 
 
