@@ -1,3 +1,17 @@
+# [8.0.0](https://github.com/leandromoreirati/pipeline-test/compare/v7.16.0...v8.0.0) (2024-03-29)
+
+
+### Bug Fixes
+
+* Trigger notification ([b16a7cf](https://github.com/leandromoreirati/pipeline-test/commit/b16a7cfd5a0ed2a7db8f32ba3a087f9271eeddf8))
+
+
+### Features
+
+* Trigger notification ([07bce19](https://github.com/leandromoreirati/pipeline-test/commit/07bce1983a5b65921c6fac1299c007ab7938a3d9))
+
+
+
 # [7.16.0](https://github.com/leandromoreirati/pipeline-test/compare/v7.15.0...v7.16.0) (2024-03-29)
 
 
@@ -31,15 +45,6 @@
 ### Features
 
 * Trigger notification ([45c35a1](https://github.com/leandromoreirati/pipeline-test/commit/45c35a1234decffb81adb7ac21d7847f27a18a2b))
-
-
-
-# [0.3.0](https://github.com/leandromoreirati/pipeline-test/compare/v0.2.0...v0.3.0) (2024-03-29)
-
-
-### Features
-
-* Trigger notification ([f8be671](https://github.com/leandromoreirati/pipeline-test/commit/f8be67176c36f6ec1eb8f8499ebde053b5512a38))
 
 
 
