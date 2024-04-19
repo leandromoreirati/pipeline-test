@@ -1,4 +1,5 @@
-mode: MainLine # Only add this if you want every version to be created automatically on your main branch.
+#mode: MainLine # Only add this if you want every version to be created automatically on your main branch.
+mode: ContinuousDelivery
 tag-prefix: '[vV]'
 commit-message-incrementing: MergeMessageOnly
 major-version-bump-message: "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\\([\\w\\s-]*\\))?(!:|:.*\\n\\n((.+\\n)+\\n)?BREAKING CHANGE:\\s.+)"
