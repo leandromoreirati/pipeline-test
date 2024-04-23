@@ -1,3 +1,12 @@
+## [11.0.1](https://github.com/leandromoreirati/pipeline-test/compare/v9.9.4...v11.0.1) (2024-04-23)
+
+
+### Bug Fixes
+
+* Trigger notification ([a6cf80f](https://github.com/leandromoreirati/pipeline-test/commit/a6cf80f54821108cc76311742f6e1f6d472377eb))
+
+
+
 ## [9.9.4](https://github.com/leandromoreirati/pipeline-test/compare/v9.9.2...v9.9.4) (2024-04-23)
 
 
@@ -32,15 +41,6 @@
 
 * Trigger notification ([5f35e06](https://github.com/leandromoreirati/pipeline-test/commit/5f35e06ef424bb9b972c15c739cee8f8158fddf4))
 * Trigger notification ([80ab8ea](https://github.com/leandromoreirati/pipeline-test/commit/80ab8eac38dedeb4e78e7132eec0084e90460d34))
-
-
-
-## [9.6.12](https://github.com/leandromoreirati/pipeline-test/compare/v9.6.11...v9.6.12) (2024-04-19)
-
-
-### Features
-
-* Trigger notification ([e2b7819](https://github.com/leandromoreirati/pipeline-test/commit/e2b78196830f7d11764d031378e7c99f42882e16))
 
 
 
