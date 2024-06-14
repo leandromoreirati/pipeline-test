@@ -1,3 +1,12 @@
+## [11.2.1](https://github.com/leandromoreirati/pipeline-test/compare/v11.1.2...v11.2.1) (2024-06-14)
+
+
+### Features
+
+* terraform ([2ce939b](https://github.com/leandromoreirati/pipeline-test/commit/2ce939baec1eda611812638e19da7069fadf4d28))
+
+
+
 ## [11.1.2](https://github.com/leandromoreirati/pipeline-test/compare/v11.1.0...v11.1.2) (2024-04-23)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * Trigger notification ([a695399](https://github.com/leandromoreirati/pipeline-test/commit/a69539914a5ce0fbe20ef51cbe0c0df541f0c188))
-
-
-
-## [9.9.2](https://github.com/leandromoreirati/pipeline-test/compare/v9.9.0...v9.9.2) (2024-04-23)
-
-
-### Bug Fixes
-
-* Trigger notification ([82acc5e](https://github.com/leandromoreirati/pipeline-test/commit/82acc5e2398a3105d54c01215fdc7e92d00b131e))
 
 
 
