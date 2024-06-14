@@ -1,0 +1,21 @@
+name: "Release"
+
+on:
+  push:
+    branches:
+      - feature/*
+  #pull_request:
+  #  types: [opened, reopened]
+  workflow_dispatch:
+
+jobs:
+  release:
+    uses: leandromoreirati/github-workflow/.github/workflows/terraform.yaml@main
+    with:
+      terraform_version: '1.5.0'
+      environment: 'dev'
+      runs-on: 'ubuntu-latest'
+      action: 'plan'
+
+    #secrets:
+    #  envPAT: ${{ secrets.envPAT }}

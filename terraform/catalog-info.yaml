@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: rg-azure-my-rg
+  #namespace: azure
+  description: |
+    [Azure Resource Group](https://github.com/leandromoreirati/tf-module-azure-resource-group)
+    Terraform module to create On Azure Resource Group
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/code-coverage: scm-only
+    backstage.io/template-origin: template:azure/azure-resource-group
+    backstage.io/repo-url: dev.azure.com?owner=devops&repo=my-rg&organization=azuredevopsleandro
+    dev.azure.com/project-repo: devops/my-rg
+    dev.azure.com/host-org: dev.azure.com/azuredevopsleandro
+    dev.azure.com/build-definition: my-rg
+    dev.azure.com/readme-path: terraform/README.md
+  tags:
+    - infrastructure
+    - iac
+    - terraform
+  links:
+    - url: https://github.com/leandromoreirati/tf-module-azure-resource-group
+      title: Azure Resource Group
+      icon: github
+spec:
+  type: infrastructure
+  owner: tsdc_platform_admin
+  #owner: group:tsdc_platform_admin
+  system: azure
+  lifecycle: production
+  #dependsOn:
+  #  - "my-rg"
