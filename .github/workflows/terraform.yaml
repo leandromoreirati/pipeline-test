@@ -18,7 +18,6 @@ jobs:
       action: 'plan'
 
     secrets:
-      envPAT: ${{ secrets.envPAT }}
       ARM_SUBSCRIPTION_ID: ${{ secrets.SUBSCRIPTION_ID }}
       ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
       ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
