@@ -16,12 +16,12 @@ jobs:
       environment: 'dev'
       runs-on: 'ubuntu-latest'
       action: 'plan'    
-    #secrets:
-    #  ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
-    #  ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
-    #  ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
-    #  ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
-    #  ARM_SECRET_ID: ${{ secrets.ARM_SECRET_ID }}
-    secrets: inherit
+    secrets:
+      ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+      ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+      ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+      ARM_SECRET_ID: ${{ secrets.ARM_SECRET_ID }}
+    #secrets: inherit
     permissions:
       contents: read
