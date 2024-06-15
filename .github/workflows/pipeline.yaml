@@ -15,8 +15,8 @@ jobs:
       terraform_version: '1.5.0'
       environment: 'dev'
       runs-on: 'ubuntu-latest'
-      action: 'plan'
-    secrets:
+      action: 'plan'    
+    #secrets:
       ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
       ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
       ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
