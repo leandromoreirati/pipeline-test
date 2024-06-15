@@ -1,4 +1,4 @@
-name: "Release"
+name: "Pipeline Test"
 
 on:
   push:
@@ -17,5 +17,10 @@ jobs:
       runs-on: 'ubuntu-latest'
       action: 'plan'
 
-    #secrets:
-    #  envPAT: ${{ secrets.envPAT }}
+    secrets:
+      envPAT: ${{ secrets.envPAT }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.SUBSCRIPTION_ID }}
+      ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+      ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+      ARM_SECRET_ID: ${{ secrets.ARM_SECRET_ID }}
