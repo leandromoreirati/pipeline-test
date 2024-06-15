@@ -1,25 +1,55 @@
-name: "Pipeline Test"
+name: Test 98 # Related to SO https://stackoverflow.com/questions/78513070/how-to-send-variables-to-called-workflow-from-the-caller-workflow/78514014?noredirect=1#comment138421206_78514014
 
 on:
-  push:
-    branches:
-      - main
-  #pull_request:
-  #  types: [opened, reopened]
   workflow_dispatch:
 
 jobs:
-  release:
-    uses: leandromoreirati/github-workflow/.github/workflows/terraform.yaml@main
-    with:
-      terraform_version: '1.5.0'
-      environment: 'dev'
-      runs-on: 'ubuntu-latest'
-      action: 'plan'    
-    secrets:
-      ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
-      ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
-      ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
-      ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
-      ARM_SECRET_ID: ${{ secrets.ARM_SECRET_ID }}
-    #secrets: inherit
+  build:
+    runs-on: [ubuntu-latest]
+    outputs:
+      iterations: ${{ steps.set-iterations.outputs.values }}
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    - name: Read CSV and trigger workflows
+      id: set-iterations
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo Saving iteration list output as Array
+        # Join the array elements into a single JSON array
+        json_array='[{"cacheName":"iteration1","expirationType":"iteration1","expirationTime":"iteration1"}, {"cacheName":"iteration2","expirationType":"iteration2","expirationTime":"iteration2"}, {"cacheName":"iteration3","expirationType":"iteration3","expirationTime":"iteration3"}]'
+        echo "List: $json_array"
+        echo "values=$json_array" >> $GITHUB_OUTPUT
+    - name: Check list
+      run: |
+        echo ${{ steps.set-iterations.outputs.values }}
+
+  call-ASGW-Config-Cache:
+    needs: [build]
+    strategy:
+      matrix: 
+        iteration: ${{fromJson(needs.build.outputs.iterations)}}
+    uses: ./.github/workflows/workflow-tester98-reusable.yml
+    secrets: inherit
+    permissions:
+      contents: read
+    with: 
+      cacheName: ${{ matrix.iteration.cacheName }}
+      expirationType: ${{ matrix.iteration.expirationType }}
+      expirationTime: ${{ matrix.iteration.expirationTime }}
+
+  check:
+    needs: [build]
+    runs-on: [ubuntu-latest]
+    strategy:
+      matrix: 
+        iteration: ${{fromJson(needs.build.outputs.iterations)}}
+    steps:
+      - name: Do something
+        run: |
+          echo Iteration
+          echo ${{ matrix.iteration }}
+          echo ${{ matrix.iteration.cacheName }}
+          echo ${{ matrix.iteration.expirationType }}
+          echo ${{ matrix.iteration.expirationType }}
