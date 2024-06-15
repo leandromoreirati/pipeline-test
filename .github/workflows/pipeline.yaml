@@ -30,7 +30,7 @@ jobs:
     strategy:
       matrix: 
         iteration: ${{fromJson(needs.build.outputs.iterations)}}
-    uses: ./.github/workflows/workflow-tester98-reusable.yml
+    uses: leandromoreirati/github-workflow/.github/workflows/terraform.yaml@main
     secrets: inherit
     permissions:
       contents: read
