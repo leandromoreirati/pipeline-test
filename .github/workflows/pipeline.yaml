@@ -16,7 +16,6 @@ jobs:
       environment: 'dev'
       runs-on: 'ubuntu-latest'
       action: 'plan'
-    secrets: inherit
     #secrets:
     #  ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
     #  ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
