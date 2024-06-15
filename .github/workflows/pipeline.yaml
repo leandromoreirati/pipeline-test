@@ -7,14 +7,6 @@ on:
   #pull_request:
   #  types: [opened, reopened]
   workflow_dispatch:
-    action:
-      required: true
-      type: choice
-      default: 'plan'
-      options:
-        - plan
-        - apply
-        - destroy
 
 jobs:
   release:
