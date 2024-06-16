@@ -6,8 +6,6 @@ fi
 
 __BUILD_TOOLS_PATH="./built-library"
 
-#__LIBRARY_PATH="./built-library"
-
 LOG_FILE="$PWD/cluster.log"
 
 rm -f $LOG_FILE
@@ -76,6 +74,7 @@ case "$1" in
 
   deploy)
     f_build_plan
+    f_build_testplan
     f_build_apply
   ;;
 

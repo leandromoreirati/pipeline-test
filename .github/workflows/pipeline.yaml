@@ -15,7 +15,7 @@ on:
         type: choice
         options:
           - plan
-          - apply
+          - deploys
           - destroy
       terraform_version:
         required: true
