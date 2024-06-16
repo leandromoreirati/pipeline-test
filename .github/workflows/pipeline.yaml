@@ -7,15 +7,25 @@ on:
   #pull_request:
   #  types: [opened, reopened]
   workflow_dispatch:
+    inputs:
+      action:
+        required: true
+        description: 'Terraform Action'
+        default: 'plan'
+        type: choice
+        options:
+          - plan
+          - apply
+          - destroy
 
 jobs:
   release:
     uses: leandromoreirati/github-workflow/.github/workflows/terraform.yaml@main
     with:
       terraform_version: '1.5.0'
-      environment: 'dev'
+      environment: 'staging'
       runs-on: 'ubuntu-latest'
-      action: 'plan'
+      action: ${{ github.event.inputs.action }}
     #secrets:
     #  ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
     #  ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
