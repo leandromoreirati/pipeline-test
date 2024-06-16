@@ -1,7 +1,9 @@
 #name: "Pipeline Test"
 #run-name: Pipeline [${{ inputs.action }}][${{ inputs.environment }}]
-run-name: '[$(Date:yyyyMMdd)$(Rev:.r)] [${{ inputs.action }}][${{ inputs.environment }}]'
+#run-name: '[$(Date:yyyyMMdd)$(Rev:.r)] [${{ inputs.action }}][${{ inputs.environment }}]'
 
+
+run-name: "${{ [$(date +'%Y-%m-%dT%H:%M:%S')] && [${{ inputs.action }}][${{ inputs.environment }}] }} by @${{ github.actor }}"
 on:
   push:
     branches:
