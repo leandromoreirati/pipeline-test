@@ -1,10 +1,10 @@
 #name: "Pipeline Test"
-run-name: "Pipeline [${{ inputs.action }}][${{ inputs.environment }}]"
+run-name: "$(date +%Y%m%d%H%M) [${{ inputs.action }}][${{ inputs.environment }}]"
 
 on:
-  push:
-    branches:
-      - main
+  #push:
+  #  branches:
+  #    - main
   #pull_request:
   #  types: [opened, reopened]
   workflow_dispatch:
