@@ -1,5 +1,5 @@
 #name: "Pipeline Test"
-run-name: "$(date +%Y%m%d%H%M) [${{ inputs.action }}][${{ inputs.environment }}]"
+run-name: $(date +%Y%m%d%H%M) [${{ inputs.action }}][${{ inputs.environment }}]
 
 on:
   #push:
