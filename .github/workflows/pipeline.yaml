@@ -1,4 +1,4 @@
-name: '[$(Date:yyyyMMdd)$(Rev:.r)][${{ inputs.action }}][${{ inputs.environment }}]'
+name: "Pipeline Test"
 
 on:
   push:
