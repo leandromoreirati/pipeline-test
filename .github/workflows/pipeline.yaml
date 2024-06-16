@@ -17,13 +17,27 @@ on:
           - plan
           - apply
           - destroy
+      terraform_version:
+        required: true
+        description: 'Terraform Version'
+        default: '1.5.0'
+        type: string
+      environment:
+        required: true
+        description: 'Pipeline Environment'
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - dev
+          - prod
 
 jobs:
   release:
     uses: leandromoreirati/github-workflow/.github/workflows/terraform.yaml@main
     with:
-      terraform_version: '1.5.0'
-      environment: 'staging'
+      terraform_version: ${{ github.event.inputs.terraform_version }}
+      environment: ${{ github.event.inputs.environment }}
       runs-on: 'ubuntu-latest'
       action: ${{ github.event.inputs.action }}
     #secrets:
