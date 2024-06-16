@@ -93,6 +93,12 @@ case "$1" in
     f_destroy_apply
   ;;
 
+  destroy)
+    f_destroy_plan
+    _destroy_testplan
+    f_destroy_apply
+  ;;
+
   clean)
     f_clean
   ;;
