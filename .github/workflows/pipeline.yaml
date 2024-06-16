@@ -1,5 +1,6 @@
 #name: "Pipeline Test"
-run-name: Pipeline [${{ inputs.action }}][${{ inputs.environment }}]
+#run-name: Pipeline [${{ inputs.action }}][${{ inputs.environment }}]
+run-name: '[$(Date:yyyyMMdd)$(Rev:.r)] [${{ inputs.action }}][${{ inputs.environment }}]'
 
 on:
   push:
