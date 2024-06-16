@@ -95,7 +95,7 @@ case "$1" in
 
   destroy)
     f_destroy_plan
-    _destroy_testplan
+    f_destroy_testplan
     f_destroy_apply
   ;;
 
