@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  release:
+  pre-commit:
     uses: leandromoreirati/github-workflow/.github/workflows/precommit.yaml@main
     with:
       tag: 'latest'

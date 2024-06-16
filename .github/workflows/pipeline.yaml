@@ -33,7 +33,7 @@ on:
           - prod
 
 jobs:
-  release:
+  terraform:
     uses: leandromoreirati/github-workflow/.github/workflows/terraform.yaml@main
     with:
       terraform_version: ${{ github.event.inputs.terraform_version }}
