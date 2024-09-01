@@ -1,0 +1,45 @@
+name: "Sonar Scan"
+
+on:
+  push:
+    branches:
+      - main
+      - feature/*
+  workflow_dispatch:
+    inputs:
+      sonar_version:
+        required: true
+        description: 'Github Action Sonar Version'
+        default: 'master'
+        type: string
+      runs-on:
+        required: true
+        description: 'Github Runner'
+        default: 'ubuntu-latest'
+        type: string
+      organization:
+        required: true
+        description: 'Github Organization Owner'
+        default: 'leandromoreirati'
+        type: string
+      project_name:
+        required: true
+        description: 'Github Repository Name'
+        default: 'pipeline-test'
+        type: string
+      branch_name:
+        required: true
+        description: 'Github Repository Name'
+        default: 'pipeline-test'
+        type: string
+
+jobs:
+  release:
+    uses: leandromoreirati/github-workflow/.github/workflows/sonar.yaml@main
+    with:
+      runs-on: 'ubuntu-latest'
+      sonar_version: ${{ github.event.inputs.sonar_version }}
+      organization: 'leandromoreirati'
+      project_name: 'pipeline-test'
+      branch_name: 'main'
+    secrets: inherit
