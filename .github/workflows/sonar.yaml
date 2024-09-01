@@ -8,27 +8,27 @@ on:
   workflow_dispatch:
     inputs:
       sonar_version:
-        required: true
+        required: false
         description: 'Github Action Sonar Version'
         default: 'master'
         type: string
       runs-on:
-        required: true
+        required: false
         description: 'Github Runner'
         default: 'ubuntu-latest'
         type: string
       organization:
-        required: true
+        required: false
         description: 'Github Organization Owner'
         default: 'leandromoreirati'
         type: string
-      project_name:
-        required: true
+      project_key:
+        required: false
         description: 'Github Repository Name'
         default: 'pipeline-test'
         type: string
       branch_name:
-        required: true
+        required: false
         description: 'Github Repository Name'
         default: 'pipeline-test'
         type: string
@@ -40,6 +40,6 @@ jobs:
       runs-on: 'ubuntu-latest'
       sonar_version: ${{ github.event.inputs.sonar_version }}
       organization: 'leandromoreirati'
-      project_name: 'pipeline-test'
+      project_key: 'pipeline-test'
       branch_name: 'main'
     secrets: inherit
