@@ -20,12 +20,12 @@ on:
       organization:
         required: true
         description: 'Github Organization Owner'
-        default: ''
+        default: 'leandromoreirati'
         type: string
       project_name:
         required: true
         description: 'Github Repository Name'
-        default: ''
+        default: 'pipeline-test'
         type: string
 
 jobs:
