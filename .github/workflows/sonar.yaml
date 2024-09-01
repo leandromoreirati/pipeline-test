@@ -1,0 +1,29 @@
+name: "Release"
+
+on:
+  push:
+    branches:
+      - main
+      - feature/*
+  #workflow_dispatch:
+  #  inputs:
+  #    sonar_version:
+  #      required: true
+  #      description: 'Github Action Sonar Version'
+  #      default: 'master'
+  #      type: string
+  #    runs-on:
+  #      required: true
+  #      description: 'Github Runner'
+  #      default: 'ubuntu-latest'
+  #      type: string
+
+jobs:
+  release:
+    uses: leandromoreirati/github-workflow/.github/workflows/sonar.yaml@main
+    with:      
+      #runs-on: ${{ github.event.inputs.runs-on }}
+      #sonar_version: ${{ github.event.inputs.sonar_version }}
+      runs-on: 'ubuntu-latest'
+      sonar_version: 'master'
+    secrets: inherit
