@@ -34,6 +34,6 @@ jobs:
     with:
       runs-on: 'ubuntu-latest'
       sonar_version: ${{ github.event.inputs.sonar_version }}
-      organization: ${{ github.event.inputs.organization }}
-      project_name: ${{ github.event.inputs.project_name }}
+      organization: 'leandromoreirati'
+      project_name: 'pipeline-test'
     secrets: inherit
