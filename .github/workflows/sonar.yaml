@@ -27,11 +27,6 @@ on:
         description: 'Github Repository Name'
         type: string
         default: 'pipeline-test'
-      branch_name:
-        required: false
-        description: 'Github Branch Name'
-        type: string
-        default: 'main'
 
 jobs:
   release:
@@ -46,5 +41,4 @@ jobs:
       sonar_version: ${{ inputs.sonar_version }}
       organization: ${{ inputs.organization }}
       project_key: ${{ inputs.project_key }}
-      branch_name: ${{ inputs.branch_name }}
     secrets: inherit
