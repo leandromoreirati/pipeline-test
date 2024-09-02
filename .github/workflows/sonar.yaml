@@ -33,7 +33,6 @@ jobs:
     uses: leandromoreirati/github-workflow/.github/workflows/sonar.yaml@main
     with:
       runs-on: 'ubuntu-latest'
-      sonar_version: 'master'
       organization: 'leandromoreirati'
       project_key: 'pipeline-test'
     secrets: inherit
