@@ -10,28 +10,28 @@ on:
       sonar_version:
         required: false
         description: 'Github Action Sonar Version'
-        default: 'master'
         type: string
+        default: 'master'
       runs-on:
         required: false
         description: 'Github Runner'
-        default: 'ubuntu-latest'
         type: string
+        default: 'ubuntu-latest'
       organization:
         required: false
         description: 'Github Organization Owner'
-        default: 'leandromoreirati'
         type: string
+        default: 'leandromoreirati'
       project_key:
         required: false
         description: 'Github Repository Name'
-        default: 'pipeline-test'
         type: string
+        default: 'pipeline-test'
       branch_name:
         required: false
         description: 'Github Branch Name'
-        default: 'main'
         type: string
+        default: 'main'
 
 jobs:
   release:
