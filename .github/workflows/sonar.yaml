@@ -5,40 +5,35 @@ on:
     branches:
       - main
       - feature/*
-  workflow_dispatch:
-    inputs:
-      sonar_version:
-        required: false
-        description: 'Github Action Sonar Version'
-        type: string
-        default: 'master'
-      runs-on:
-        required: false
-        description: 'Github Runner'
-        type: string
-        default: 'ubuntu-latest'
-      organization:
-        required: false
-        description: 'Github Organization Owner'
-        type: string
-        default: 'leandromoreirati'
-      project_key:
-        required: false
-        description: 'Github Repository Name'
-        type: string
-        default: 'pipeline-test'
+  #workflow_dispatch:
+  #  inputs:
+  #    sonar_version:
+  #      required: false
+  #      description: 'Github Action Sonar Version'
+  #      type: string
+  #      default: 'master'
+  #    runs-on:
+  #      required: false
+  #      description: 'Github Runner'
+  #      type: string
+  #      default: 'ubuntu-latest'
+  #    organization:
+  #      required: false
+  #      description: 'Github Organization Owner'
+  #      type: string
+  #      default: 'leandromoreirati'
+  #    project_key:
+  #      required: false
+  #      description: 'Github Repository Name'
+  #      type: string
+  #      default: 'pipeline-test'
 
 jobs:
   release:
     uses: leandromoreirati/github-workflow/.github/workflows/sonar.yaml@main
     with:
-      #runs-on: 'ubuntu-latest'
-      #sonar_version: ${{ github.event.inputs.sonar_version }}
-      #organization: 'leandromoreirati'
-      #project_key: 'pipeline-test'
-      #branch_name: 'main'
-      runs-on: ${{ inputs.runs-on }}
-      sonar_version: ${{ inputs.sonar_version }}
-      organization: ${{ inputs.organization }}
-      project_key: ${{ inputs.project_key }}
+      runs-on: 'ubuntu-latest'
+      sonar_version: ${{ github.event.inputs.sonar_version }}
+      organization: 'leandromoreirati'
+      project_key: 'pipeline-test'
     secrets: inherit
