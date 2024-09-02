@@ -4,14 +4,9 @@ on:
   push:
     branches:
       - main
-      - feature/*
+      - feature/**
   #workflow_dispatch:
   #  inputs:
-  #    sonar_version:
-  #      required: false
-  #      description: 'Github Action Sonar Version'
-  #      type: string
-  #      default: 'master'
   #    runs-on:
   #      required: false
   #      description: 'Github Runner'
