@@ -29,17 +29,22 @@ on:
         type: string
       branch_name:
         required: false
-        description: 'Github Repository Name'
-        default: 'pipeline-test'
+        description: 'Github Branch Name'
+        default: 'main'
         type: string
 
 jobs:
   release:
     uses: leandromoreirati/github-workflow/.github/workflows/sonar.yaml@main
     with:
-      runs-on: 'ubuntu-latest'
+      #runs-on: 'ubuntu-latest'
+      #sonar_version: ${{ github.event.inputs.sonar_version }}
+      #organization: 'leandromoreirati'
+      #project_key: 'pipeline-test'
+      #branch_name: 'main'
+      runs-on: ${{ github.event.inputs.runs-on }}
       sonar_version: ${{ github.event.inputs.sonar_version }}
-      organization: 'leandromoreirati'
-      project_key: 'pipeline-test'
-      branch_name: 'main'
+      organization: ${{ github.event.inputs.organization }}
+      project_key: ${{ github.event.inputs.project_key }}
+      branch_name: ${{ github.event.inputs.branch_name }}
     secrets: inherit
