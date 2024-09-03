@@ -1,4 +1,4 @@
-name: "Pre Commit"
+run-name: 'Pre-Commit'
 
 on:
   #push:

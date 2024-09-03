@@ -1,27 +1,27 @@
-name: "Sonar Scan"
+run-name: 'Sonar Scan'
 
 on:
   push:
     branches:
       - main
       - feature/**
-  #workflow_dispatch:
-  #  inputs:
-  #    runs-on:
-  #      required: false
-  #      description: 'Github Runner'
-  #      type: string
-  #      default: 'ubuntu-latest'
-  #    organization:
-  #      required: false
-  #      description: 'Github Organization Owner'
-  #      type: string
-  #      default: 'leandromoreirati'
-  #    project_key:
-  #      required: false
-  #      description: 'Github Repository Name'
-  #      type: string
-  #      default: 'pipeline-test'
+  workflow_dispatch:
+    inputs:
+      runs-on:
+        required: false
+        description: 'Github Runner'
+        type: string
+        default: 'ubuntu-latest'
+      organization:
+        required: false
+        description: 'Github Organization Owner'
+        type: string
+        default: 'leandromoreirati'
+      project_key:
+        required: false
+        description: 'Github Repository Name'
+        type: string
+        default: 'pipeline-test'
 
 jobs:
   release:

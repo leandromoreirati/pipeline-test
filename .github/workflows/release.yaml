@@ -1,4 +1,4 @@
-name: "Release"
+run-name: 'Release'
 
 on:
   push:
