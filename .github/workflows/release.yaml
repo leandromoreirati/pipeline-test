@@ -11,7 +11,7 @@ jobs:
   release:
     uses: leandromoreirati/github-workflow/.github/workflows/release.yaml@main
     with:
-      versionSpec: '5.12.x'
+      versionSpec: '6.x'
       configFilePath: './GitVersion.yml'
       dotNetVersion: '3.1.x'
       runs-on: 'ubuntu-latest'
