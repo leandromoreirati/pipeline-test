@@ -1,3 +1,12 @@
+## [11.84.1](https://github.com/leandromoreirati/pipeline-test/compare/v11.83.8...v11.84.1) (2024-10-18)
+
+
+### Features
+
+* Update GitVersion yaml. ([a8cf74c](https://github.com/leandromoreirati/pipeline-test/commit/a8cf74c7e8b2d230e17a5e5128a5dd73297d29a3))
+
+
+
 ## [11.83.8](https://github.com/leandromoreirati/pipeline-test/compare/v11.83.0...v11.83.8) (2024-10-18)
 
 
@@ -128,15 +137,6 @@
 * Update Template. ([74bc5ed](https://github.com/leandromoreirati/pipeline-test/commit/74bc5ed99e8e42e46f13341468a05fa80b73feff))
 * Update Template. ([9322457](https://github.com/leandromoreirati/pipeline-test/commit/9322457c2607cc50c6cef1a95c22c6d385aaad0e))
 * Update. ([ccc8477](https://github.com/leandromoreirati/pipeline-test/commit/ccc84777c9306e5d278a383442276c1745e54165))
-
-
-
-## [11.2.1](https://github.com/leandromoreirati/pipeline-test/compare/v11.1.2...v11.2.1) (2024-06-14)
-
-
-### Features
-
-* terraform ([2ce939b](https://github.com/leandromoreirati/pipeline-test/commit/2ce939baec1eda611812638e19da7069fadf4d28))
 
 
 
