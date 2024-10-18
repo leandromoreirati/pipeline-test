@@ -1,3 +1,12 @@
+# [11.83.0](https://github.com/leandromoreirati/pipeline-test/compare/v11.82.2...v11.83.0) (2024-10-18)
+
+
+### Features
+
+* Empty-Commit ([55f2cba](https://github.com/leandromoreirati/pipeline-test/commit/55f2cba3a06fcf478c0869dace16cd583b04fcc2))
+
+
+
 ## [11.82.2](https://github.com/leandromoreirati/pipeline-test/compare/v11.81.0...v11.82.2) (2024-10-18)
 
 
@@ -128,15 +137,6 @@
 ### Bug Fixes
 
 * Trigger notification ([b76702c](https://github.com/leandromoreirati/pipeline-test/commit/b76702cf8e25a9505f4d5e39f5fc89e8b93f0843))
-
-
-
-# [11.1.0](https://github.com/leandromoreirati/pipeline-test/compare/v11.0.1...v11.1.0) (2024-04-23)
-
-
-### Features
-
-* Trigger notification ([bd355da](https://github.com/leandromoreirati/pipeline-test/commit/bd355da7d4f44af3e1a00e727a805767207cf976))
 
 
 
