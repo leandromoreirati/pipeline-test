@@ -1,0 +1,37 @@
+run-name: 'DEploy Helm Chart'
+
+on:
+  push:
+    branches:
+      - main
+      #- feature/**
+  workflow_dispatch:
+    inputs:
+      runs-on:
+        required: false
+        description: 'Github Runner'
+        type: string
+        default: 'ubuntu-latest'
+      helm_version:
+        required: false
+        description: 'Github Organization Owner'
+        type: string
+        default: '3.15.0'
+      action:
+        required: true
+        description: 'Terraform Action'
+        default: 'plan'
+        type: choice
+        options:
+          - plan
+          - deploy
+          - destroy
+
+jobs:
+  release:
+    uses: leandromoreirati/github-workflow/.github/workflows/helm.yaml@main
+    with:
+      runs-on: 'ubuntu-latest'
+      helm_version: '3.15.0'
+      action: ${{ github.event.inputs.action }}
+    secrets: inherit
